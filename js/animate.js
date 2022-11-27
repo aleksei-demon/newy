@@ -7,7 +7,11 @@ let fontStyle = "45px verdana";
 let fontStyle1 = "25px verdana";
 
 let zstepLeft_1 = 100;
-let zstepLeft_2 = 150;
+let zstepLeft_2 = 140;
+let zstepLeft_3 = 90;
+let zstepLeft_4 = 130;
+let zstepLeft_5 = 160;
+let zstepLeft_6 = 110;
 
 let stepLeft_1 = 100;
 let stepLeft_2 = 250;
@@ -15,7 +19,7 @@ let stepLeft_3 = 150;
 let stepLeft_4 = 250;
 let stepLeft_5 = 150;
 
-let rowSpace = 100;
+let rowSpace = 200;
 
 function snowString(snows = 10, spaces = 12) {
 	let snowsAmount = "";
@@ -32,7 +36,7 @@ function snowString(snows = 10, spaces = 12) {
 
 if (h>w) {
 	fontStyle = "30px verdana"; let fontStyle1 = "20px verdana"; stepLeft_1 = 10; stepLeft_2 = 25; rowSpace = 400;
-	zstepLeft_1 = 10;	zstepLeft_2 = 50;
+	zstepLeft_1 = 10; zstepLeft_2 = 50; zstepLeft_3 = 20; zstepLeft_4 = 60; zstepLeft_5 = 30; zstepLeft_6 = 40;
 	}
 
 let dwn = 0;						let zdown = 0;
@@ -40,6 +44,7 @@ let dwn2 = -((h-rowSpace) / 4);		let zdown2 = -((h-rowSpace) / 4);
 let dwn3 = -((h-rowSpace) / 4)*2;	let zdown3 = -((h-rowSpace) / 4)*2;
 let dwn4 = -((h-rowSpace) / 4)*3;	let zdown4 = -((h-rowSpace) / 4)*3;
 let dwn5 = -((h-rowSpace) / 4)*4;	let zdown5 = -((h-rowSpace) / 4)*4;
+									let zdown6 = -((h-rowSpace) / 4)*5;
 
 let canvas = document.getElementById('canvas');
 
@@ -54,8 +59,8 @@ setInterval( function draw() {
 	  if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -100;}	
 	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = -200;}	
 	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -150;}	
-	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -100; }	
-	  if ( dwn4 > (h-140)) { dwn5 = 0; stepLeft_5 = -300; }	
+	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -500; }	
+	  if ( dwn4 > (h-140)) { dwn5 = 0; stepLeft_5 = -600; }	
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
 	ctx.strokeStyle = "#8988f99B";
@@ -69,7 +74,8 @@ setInterval( function draw() {
 		if ( zdown2 > (h-140)) { zdown2 = 0 }
 		if ( zdown3 > (h-140)) { zdown3 = 0 }
 		if ( zdown4 > (h-140)) { zdown4 = 0 }
-		if ( zdown4 > (h-140)) { zdown5 = 0 }
+		if ( zdown5 > (h-140)) { zdown5 = 0 }
+		if ( zdown5 > (h-140)) { zdown6 = 0 }
 	let ztx = canvas.getContext('2d');
 	ztx.font = fontStyle1;
 	ztx.strokeStyle = "#8988f99B";
@@ -78,8 +84,7 @@ setInterval( function draw() {
 	ztx.strokeText(snowString(), zstepLeft_2, zdown3+=0.5);
 	ztx.strokeText(snowString(), zstepLeft_1, zdown4+=0.5);
 	ztx.strokeText(snowString(), zstepLeft_2, zdown5+=0.5);
-	
-	
+	ztx.strokeText(snowString(), zstepLeft_1, zdown6+=0.5);
 	
 		  }
 }, 50);
