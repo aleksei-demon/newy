@@ -81,12 +81,12 @@ setInterval( function draw() {
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
 	ctx.strokeStyle = "#8988f99B";
-	ctx.strokeText(snowString(7, 27), stepLeft_1+=0.1, dwn++);	
-	ctx.strokeText(snowString(7, 25), stepLeft_2+=(-0.3), dwn2++);
-	ctx.strokeText(snowString(7, 30), stepLeft_3+=0.4, dwn3++);
-	ctx.strokeText(snowString(7, 25), stepLeft_4+=(-0.3), dwn4++);
-	ctx.strokeText(snowString(7, 32), stepLeft_5+=0.4, dwn5++);
-	ctx.strokeText(snowString(7, 30), stepLeft_6+=(-0.4), dwn6++);
+	ctx.strokeText(snowString(7, 17), stepLeft_1+=0.1, dwn++);	
+	ctx.strokeText(snowString(7, 15), stepLeft_2+=(-0.3), dwn2++);
+	ctx.strokeText(snowString(7, 10), stepLeft_3+=0.4, dwn3++);
+	ctx.strokeText(snowString(7, 15), stepLeft_4+=(-0.3), dwn4++);
+	ctx.strokeText(snowString(7, 12), stepLeft_5+=0.4, dwn5++);
+	ctx.strokeText(snowString(7, 10), stepLeft_6+=(-0.4), dwn6++);
   }
 }, 50);
 /*
