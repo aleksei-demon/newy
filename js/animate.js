@@ -37,7 +37,7 @@ function snowString(snows = 7, spaces = 30) {
 }
 
 if (h>w) {
-	fontStyle = "20px Christmas Mouse";   rowSpace = 400;	
+	fontStyle = "20px Christmas Mouse";   rowSpace = 300;	
 	}
 
 let dwn = 0;						let zdown = 0;
