@@ -61,9 +61,9 @@ setInterval( function draw() {
 	ctx.strokeStyle = "#8988f99B";
 	ctx.strokeText(snowString(5, 14), stepLeft_1+=0.1, dwn++);	
 	ctx.strokeText(snowString(5, 14), stepLeft_2+=0.2, dwn2++);
-	ctx.strokeText(snowString(5, 14), stepLeft_3+=0.3, dwn3++);
+	ctx.strokeText(snowString(5, 14), stepLeft_3+=0.4, dwn3++);
 	ctx.strokeText(snowString(5, 14), stepLeft_4+=0.15, dwn4++);
-	ctx.strokeText(snowString(5, 14), stepLeft_5+=0.25, dwn5++);
+	ctx.strokeText(snowString(5, 14), stepLeft_5+=0.3, dwn5++);
 	
 		if ( zdown > (h-140)) { zdown = 0; }
 		if ( zdown2 > (h-140)) { zdown2 = 0 }
