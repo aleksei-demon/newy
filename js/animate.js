@@ -3,8 +3,8 @@ let w = ( document.documentElement.clientWidth ) - 3;
 
 console.log ( h, w );
 
-let fontStyle = "45px verdana";
-let fontStyle1 = "25px verdana";
+let fontStyle = "25px Christmas Mouse";
+let fontStyle1 = "15px verdana";
 
 let zstepLeft_1 = 100;
 let zstepLeft_2 = 140;
@@ -21,10 +21,12 @@ let stepLeft_5 = 150;
 
 let rowSpace = 200;
 
-function snowString(snows = 10, spaces = 12) {
+function snowString(snows = 7, spaces = 30) {
 	let snowsAmount = "";
+	
+	
 	for (let i = 0; i < snows; i++){
-		snowsAmount += "*";
+		snowsAmount += "e";
 		
 		for (let k = 0; k < spaces; k++){
 			snowsAmount += " ";
@@ -35,8 +37,7 @@ function snowString(snows = 10, spaces = 12) {
 }
 
 if (h>w) {
-	fontStyle = "30px verdana"; let fontStyle1 = "20px verdana"; stepLeft_1 = 10; stepLeft_2 = 25; rowSpace = 400;
-	zstepLeft_1 = 10; zstepLeft_2 = 50; zstepLeft_3 = 20; zstepLeft_4 = 60; zstepLeft_5 = 30; zstepLeft_6 = 40;
+	fontStyle = "20px Christmas Mouse";   rowSpace = 400;	
 	}
 
 let dwn = 0;						let zdown = 0;
@@ -57,19 +58,21 @@ setInterval( function draw() {
 
   if (canvas.getContext) {
 	  if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -100;}	
-	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = -200;}	
+	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = 100;}	
 	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -150;}	
-	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -500; }	
+	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = 100; }	
 	  if ( dwn4 > (h-140)) { dwn5 = 0; stepLeft_5 = -600; }	
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
 	ctx.strokeStyle = "#8988f99B";
-	ctx.strokeText(snowString(5, 14), stepLeft_1+=0.1, dwn++);	
-	ctx.strokeText(snowString(5, 14), stepLeft_2+=0.2, dwn2++);
-	ctx.strokeText(snowString(5, 14), stepLeft_3+=0.4, dwn3++);
-	ctx.strokeText(snowString(5, 14), stepLeft_4+=0.15, dwn4++);
-	ctx.strokeText(snowString(5, 14), stepLeft_5+=0.3, dwn5++);
+	ctx.strokeText(snowString(7, 27), stepLeft_1+=0.1, dwn++);	
+	ctx.strokeText(snowString(7, 25), stepLeft_2+=(-0.3), dwn2++);
+	ctx.strokeText(snowString(7, 30), stepLeft_3+=0.4, dwn3++);
+	ctx.strokeText(snowString(7, 25), stepLeft_4+=(-0.3), dwn4++);
+	ctx.strokeText(snowString(7, 32), stepLeft_5+=0.4, dwn5++);
 	
+	
+	/*
 		if ( zdown > (h-140)) { zdown = 0; }
 		if ( zdown2 > (h-140)) { zdown2 = 0 }
 		if ( zdown3 > (h-140)) { zdown3 = 0 }
@@ -85,7 +88,7 @@ setInterval( function draw() {
 	ztx.strokeText(snowString(), zstepLeft_1, zdown4+=0.5);
 	ztx.strokeText(snowString(), zstepLeft_2, zdown5+=0.5);
 	ztx.strokeText(snowString(), zstepLeft_1, zdown6+=0.5);
-	
+	*/
 		  }
 }, 50);
 /*

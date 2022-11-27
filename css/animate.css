@@ -8,9 +8,19 @@
 		url('../fonts/fascinate_cyrillic.svg#fascinate_cyrillic') format('svg'); /* Chrome < 4, Legacy iOS */	
 }
 
+@font-face {
+	font-family: 'Christmas Mouse';
+	src: url('../fonts/christmas_mouse.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/christmas_mouse.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/christmas_mouse.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/christmas_mouse.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/christmas_mouse.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/christmas_mouse.svg#christmas_mouse') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 body {
 
-background: radial-gradient(circle closest-side at 50% 50%, yellow, #FF000068 80px, #318CE700 100%),
+background: no-repeat radial-gradient(circle closest-side at 50% 50%, yellow, #FF000068 80px, #318CE700 100%),
 linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99) 5%,rgb(128, 95, 121));
 	
 	overflow:  hidden; 
@@ -260,6 +270,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 @media screen and (orientation: portrait) {
 	
 .spruse {
+	top: 10vh;
 	width: 99vw;
 	grid-template-columns:  repeat(20, 5vw);
 	grid-template-rows: repeat(35, 2vh);
