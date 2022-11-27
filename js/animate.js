@@ -31,12 +31,12 @@ function snowString(snows = 7, spaces = 30) {
 
 if (h>w) {
 	fontStyle = "20px Christmas Mouse";   rowSpace = 300;	
-		stepLeft_1 = -110;
-		stepLeft_2 = -150;
-		stepLeft_3 = -110;
-		stepLeft_4 = -150;
-		stepLeft_5 = -110;
-		stepLeft_6 = -150;
+		stepLeft_1 = -210;
+		stepLeft_2 = -250;
+		stepLeft_3 = -210;
+		stepLeft_4 = -250;
+		stepLeft_5 = -210;
+		stepLeft_6 = -250;
 	}
 
 let dwn = 0;						
