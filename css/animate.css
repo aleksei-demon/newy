@@ -10,7 +10,7 @@
 
 body {
 
-background: no-repeat radial-gradient(circle closest-side at 50% 50%, yellow, #FF000068 80px, #318CE700 100%),
+background: radial-gradient(circle closest-side at 50% 50%, yellow, #FF000068 80px, #318CE700 100%),
 linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99) 5%,rgb(128, 95, 121));
 	
 	overflow:  hidden; 
