@@ -1,13 +1,20 @@
 let h = ( document.documentElement.clientHeight );
-let hei = (h - 3);
 let w = ( document.documentElement.clientWidth ) - 3;
 
 console.log ( h, w );
 
+let fontStyle = "45px verdana";
+let stepLeft_1 = 100;
+let stepLeft_2 = 250;
+let rowSpace = 100;
+
+if (h>w) {fontStyle = "20px verdana"; stepLeft_1 = 10; stepLeft_2 = 25; rowSpace = 400;}
+
 let dwn = 0;
-let dwn2 = -((h-100) / 4);
-let dwn3 = -((h-100) / 4)*2;
-let dwn4 = -((h-100) / 4)*3;
+let dwn2 = -((h-rowSpace) / 4);
+let dwn3 = -((h-rowSpace) / 4)*2;
+let dwn4 = -((h-rowSpace) / 4)*3;
+let dwn5 = -((h-rowSpace) / 4)*4;
 
 setInterval( function draw() { 
   var canvas = document.getElementById('canvas');
@@ -17,17 +24,19 @@ setInterval( function draw() {
   
 
   if (canvas.getContext) {
-	  if ( dwn > (h-100)) { dwn = 0}
-	  if ( dwn2 > (h-100)) { dwn2 = 0 }
-	  if ( dwn3 > (h-100)) { dwn3 = 0 }
-	  if ( dwn3 > (h-100)) { dwn4 = 0}
+	  if ( dwn > (h-140)) { dwn = 0}
+	  if ( dwn2 > (h-140)) { dwn2 = 0 }
+	  if ( dwn3 > (h-140)) { dwn3 = 0 }
+	  if ( dwn4 > (h-140)) { dwn4 = 0}
+	  if ( dwn4 > (h-140)) { dwn5 = 0}
     var ctx = canvas.getContext('2d');
-	ctx.font = "50px verdana";
+	ctx.font = fontStyle;
 	ctx.strokeStyle = "#8988f99B";
-	ctx.strokeText("	*									*									*									*											*", 100, dwn++);	
-	ctx.strokeText("*									*									*									*											*", 250, dwn2++);
-	ctx.strokeText("	*							*									*											*											*", 100, dwn3++);
-	ctx.strokeText("*							*									*											* 											*", 250, dwn4++);
+	ctx.strokeText("	*									*									   *									 *											*										 	  *", stepLeft_1, dwn++);	
+	ctx.strokeText("*									*									   *							   		  *											  *											  *", stepLeft_2, dwn2++);
+	ctx.strokeText("	*							*									  *											*											*											*", stepLeft_1, dwn3++);
+	ctx.strokeText("*							*									*											* 											*											*", stepLeft_2, dwn4++);
+	ctx.strokeText("      *							*									*											* 											*											*", stepLeft_1, dwn5++);
 		  }
 }, 50);
 
