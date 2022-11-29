@@ -85,7 +85,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				   z-index: 10;
 			   max-width: 2vw;
 			   border: 15vh solid transparent; 
-			   border-bottom: 22vh solid #006800; 
+			   border-bottom: 22vh solid #007000; 
 			   
 		}
 		   .b3{
@@ -94,7 +94,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				   z-index: 10;
 				max-width: 10vw;
 			   border: 20vh solid transparent; 
-			   border-bottom: 22vh solid #006600; 
+			   border-bottom: 22vh solid #006800; 
 			   
 		}
 		   .b2{
@@ -103,7 +103,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				   z-index: 10;
 				max-width: 10vw;
 			   border: 40vh solid transparent; 
-			   border-bottom: 20vh solid #006200; 
+			   border-bottom: 20vh solid #006300; 
 			   
 		}
 		   .b1{
@@ -130,7 +130,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 		height: 2vh;
 		border-radius: 50%;	
 		z-index: 100;
-		transition: background-color .2s;
+		transition: background-color .1s;
 		}
 
 								#g1 {

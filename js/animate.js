@@ -3,23 +3,25 @@ let w = ( document.documentElement.clientWidth ) - 3;
 
 console.log ( h, w );
 
-let fontStyle = "25px Christmas Mouse";
+let fontStyle = "30px monospace";
 
-let stepLeft_1 = 100;
-let stepLeft_2 = 250;
-let stepLeft_3 = 150;
-let stepLeft_4 = 100;
-let stepLeft_5 = 250;
-let stepLeft_6 = 150;
+let stepLeft_1 = -400;
+let stepLeft_2 = -450;
+let stepLeft_3 = -450;
+let stepLeft_4 = -400;
+let stepLeft_5 = -450;
+let stepLeft_6 = -450;
+let stepLeft_7 = -550;
+let stepLeft_8 = -550;
+		
+let rowSpace = 250;
 
-let rowSpace = 200;
-
-function snowString(snows = 7, spaces = 30) {
+function snowString(snows = 10, spaces = 10) {
 	let snowsAmount = "";
 	
 	
 	for (let i = 0; i < snows; i++){
-		snowsAmount += "e";
+		snowsAmount += ".";
 		
 		for (let k = 0; k < spaces; k++){
 			snowsAmount += " ";
@@ -30,13 +32,15 @@ function snowString(snows = 7, spaces = 30) {
 }
 
 if (h>w) {
-	fontStyle = "20px Christmas Mouse";   rowSpace = 300;	
-		stepLeft_1 = -210;
-		stepLeft_2 = -250;
-		stepLeft_3 = -210;
-		stepLeft_4 = -250;
-		stepLeft_5 = -210;
-		stepLeft_6 = -250;
+	fontStyle = "20px monospace";   rowSpace = 500;	
+		stepLeft_1 = -510;
+		stepLeft_2 = -550;
+		stepLeft_3 = -510;
+		stepLeft_4 = -550;
+		stepLeft_5 = -510;
+		stepLeft_6 = -550;
+		stepLeft_7 = -550;
+		stepLeft_8 = -550;
 	}
 
 let dwn = 0;						
@@ -45,6 +49,8 @@ let dwn3 = -((h-rowSpace) / 4)*2;
 let dwn4 = -((h-rowSpace) / 4)*3;	
 let dwn5 = -((h-rowSpace) / 4)*4;	
 let dwn6 = -((h-rowSpace) / 4)*5;	
+let dwn7 = -((h-rowSpace) / 4)*6;
+let dwn8 = -((h-rowSpace) / 4)*7;
 
 let canvas = document.getElementById('canvas');
 
@@ -56,37 +62,44 @@ setInterval( function draw() {
   
 
   if (canvas.getContext && h<w) {
-	  if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -100;}	
-	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = 100;}	
-	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -150;}	
-	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = 100; }	
+	  if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -400;}	
+	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = -500;}	
+	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -450;}	
+	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -500; }	
 	  if ( dwn4 > (h-140)) { dwn5 = 0; stepLeft_5 = -600; }	
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
-	ctx.strokeStyle = "#8988f99B";
-	ctx.strokeText(snowString(7, 27), stepLeft_1+=0.1, dwn++);	
-	ctx.strokeText(snowString(7, 25), stepLeft_2+=(-0.3), dwn2++);
-	ctx.strokeText(snowString(7, 30), stepLeft_3+=0.4, dwn3++);
-	ctx.strokeText(snowString(7, 25), stepLeft_4+=(-0.3), dwn4++);
-	ctx.strokeText(snowString(7, 32), stepLeft_5+=0.4, dwn5++);
+	ctx.fillStyle = "#8988f99B";
+	ctx.fillText(snowString(12, 10), stepLeft_1+=0.3, dwn++);	
+	ctx.fillText(snowString(12, 12), stepLeft_2+=0.4, dwn2++);
+	ctx.fillText(snowString(12, 10), stepLeft_3+=0.5, dwn3++);
+	ctx.fillText(snowString(12, 12), stepLeft_4+=0.6, dwn4++);
+	ctx.fillText(snowString(12, 10), stepLeft_5+=0.7, dwn5++);
 	
-  } else if (canvas.getContext && h>w) { //console.log(dwn, dwn2, dwn3, dwn4, dwn5, dwn6);
+  } else if (canvas.getContext && h>w) { 
 	  
-	   if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -200;}	
-	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = -250;}	
-	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -200;}	
-	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -250; }	
-	  if ( dwn5 > (h-140)) { dwn5 = 0; stepLeft_5 = -200; }	
-	  if ( dwn5 > (h-140)) { dwn5 = 0; stepLeft_6 = -200; }	
+	   if ( dwn > (h-140)) { dwn = 0; stepLeft_1 = -600;}	
+	  if ( dwn2 > (h-140)) { dwn2 = 0; stepLeft_2 = -650;}	
+	  if ( dwn3 > (h-140)) { dwn3 = 0; stepLeft_3 = -600;}	
+	  if ( dwn4 > (h-140)) { dwn4 = 0; stepLeft_4 = -650; }	
+	  if ( dwn5 > (h-140)) { dwn5 = 0; stepLeft_5 = -600; }	
+	  if ( dwn6 > (h-140)) { dwn6 = 0; stepLeft_6 = -600; }	
+	  
+	  if ( dwn7 > (h-140)) { dwn7 = 0; stepLeft_7 = -600; }	
+	  if ( dwn7 > (h-140)) { dwn7 = 0; stepLeft_8 = -600; }	
+	  
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
-	ctx.strokeStyle = "#8988f99B";
-	ctx.strokeText(snowString(7, 17), stepLeft_1+=0.1, dwn++);	
-	ctx.strokeText(snowString(7, 15), stepLeft_2+=(-0.3), dwn2++);
-	ctx.strokeText(snowString(7, 10), stepLeft_3+=0.4, dwn3++);
-	ctx.strokeText(snowString(7, 15), stepLeft_4+=(-0.3), dwn4++);
-	ctx.strokeText(snowString(7, 12), stepLeft_5+=0.4, dwn5++);
-	ctx.strokeText(snowString(7, 10), stepLeft_6+=(-0.4), dwn6++);
+	ctx.fillStyle = "#8988f99B";
+	ctx.fillText(snowString(15, 5), stepLeft_1+=0.3, dwn++);	
+	ctx.fillText(snowString(15, 6), stepLeft_2+=0.4, dwn2++);
+	ctx.fillText(snowString(15, 5), stepLeft_3+=0.5, dwn3++);
+	ctx.fillText(snowString(15, 6), stepLeft_4+=0.6, dwn4++);
+	ctx.fillText(snowString(15, 5), stepLeft_5+=0.7, dwn5++);
+	ctx.fillText(snowString(15, 6), stepLeft_6+=0.8, dwn6++);
+	
+	ctx.fillText(snowString(15, 5), stepLeft_7+=0.9, dwn7++);
+	ctx.fillText(snowString(15, 6), stepLeft_8+=1, dwn8++);
   }
 }, 50);
 /*
@@ -133,7 +146,7 @@ function setLight () {
 			 }
 	
 				let colorDivs = document.querySelectorAll(".gar");
-				let colors = ['red', 'lime', 'blue', 'yellow', 'Aqua', 'Fuchsia'];
+				let colors = ['red', 'lime', '#0080FF', 'yellow', 'Aqua', 'Fuchsia'];
 				let randColor; 
 				let i = 0; 
 				
