@@ -78,7 +78,37 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 	justify-items: center;
    
 }
-			 
+
+		.gift_1{
+				grid-column-start: 6;				   
+				grid-row-start: 34;
+				z-index: 10;
+				width: 5vh;
+				height: 5vh;
+				background-image: url("../img/image1.png");
+				background-size: contain;
+				display: none;
+		}
+		
+		.gift_2 {
+				grid-column-start: 15;				   
+				grid-row-start: 35;
+				z-index: 10;
+				width: 5vh;
+				height: 5vh;
+				background-image: url("../img/image2.png");
+				background-size: contain;
+				display: none;
+		}
+
+			.star {
+				grid-column-start: 10;				   
+				grid-row-start: 6;
+				z-index: 10;
+				color: red;
+				font-size: 6vh;
+			}
+			
 		   .b4{
 					grid-column-start: 10;				   
 				   grid-row-start: 1;

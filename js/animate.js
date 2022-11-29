@@ -131,9 +131,9 @@ let year = now.getFullYear();
 let month = now.getMonth(); 
 
 if(month == 0) {
-	actualYear = 'С Новым ' + year + ' годом!!!';
+	actualYear = 'С Новым ' + year + ' годом!!!';	
 	} else if (month == 11) {
-		actualYear = 'С Наступающим ' + (year + 1) + ' годом!!!';
+		actualYear = 'С Наступающим ' + (year + 1) + ' годом!!!';		
 	} else {actualYear = 'not now'}
 
 
@@ -143,6 +143,10 @@ function setLight () {
 		
 		 if (clickCounter >= 4) {			 
 			 document.querySelector('h1.happy').innerHTML = actualYear;
+			 document.querySelector('div.star').innerHTML = '✮';			 
+			 } else if (clickCounter >= 4 && month == 11) {
+				 document.querySelector('.gift_1').style.display = "block"; 
+					document.querySelector('.gift_2').style.display = "block"; 
 			 }
 	
 				let colorDivs = document.querySelectorAll(".gar");
