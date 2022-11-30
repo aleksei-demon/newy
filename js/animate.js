@@ -3,7 +3,7 @@ let w = ( document.documentElement.clientWidth ) - 3;
 
 console.log ( h, w );
 
-let fontStyle = "30px monospace";
+let fontStyle = "25px monospace";
 
 let stepLeft_1 = -400;
 let stepLeft_2 = -450;
@@ -32,15 +32,15 @@ function snowString(snows = 10, spaces = 10) {
 }
 
 if (h>w) {
-	fontStyle = "20px monospace";   rowSpace = 500;	
-		stepLeft_1 = -510;
-		stepLeft_2 = -550;
-		stepLeft_3 = -510;
-		stepLeft_4 = -550;
-		stepLeft_5 = -510;
-		stepLeft_6 = -550;
-		stepLeft_7 = -550;
-		stepLeft_8 = -550;
+	fontStyle = "20px monospace";   rowSpace = 400;	
+		stepLeft_1 = -310;
+		stepLeft_2 = -350;
+		stepLeft_3 = -310;
+		stepLeft_4 = -350;
+		stepLeft_5 = -310;
+		stepLeft_6 = -350;
+		stepLeft_7 = -350;
+		stepLeft_8 = -350;
 	}
 
 let dwn = 0;						
@@ -70,11 +70,12 @@ setInterval( function draw() {
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
 	ctx.fillStyle = "#8988f99B";
-	ctx.fillText(snowString(12, 10), stepLeft_1+=0.3, dwn++);	
-	ctx.fillText(snowString(12, 12), stepLeft_2+=0.4, dwn2++);
-	ctx.fillText(snowString(12, 10), stepLeft_3+=0.5, dwn3++);
-	ctx.fillText(snowString(12, 12), stepLeft_4+=0.6, dwn4++);
-	ctx.fillText(snowString(12, 10), stepLeft_5+=0.7, dwn5++);
+	ctx.rotate(-9 * Math.PI / 180);
+	ctx.fillText(snowString(22, 10), stepLeft_1+=0.3, dwn++);	
+	ctx.fillText(snowString(22, 12), stepLeft_2+=0.4, dwn2++);
+	ctx.fillText(snowString(22, 10), stepLeft_3+=0.5, dwn3++);
+	ctx.fillText(snowString(22, 12), stepLeft_4+=0.6, dwn4++);
+	ctx.fillText(snowString(22, 10), stepLeft_5+=0.7, dwn5++);
 	
   } else if (canvas.getContext && h>w) { 
 	  
@@ -91,6 +92,7 @@ setInterval( function draw() {
     let ctx = canvas.getContext('2d');
 	ctx.font = fontStyle;
 	ctx.fillStyle = "#8988f99B";
+	ctx.rotate(-9 * Math.PI / 180);
 	ctx.fillText(snowString(15, 5), stepLeft_1+=0.3, dwn++);	
 	ctx.fillText(snowString(15, 6), stepLeft_2+=0.4, dwn2++);
 	ctx.fillText(snowString(15, 5), stepLeft_3+=0.5, dwn3++);
@@ -144,9 +146,12 @@ function setLight () {
 		 if (clickCounter >= 4) {			 
 			 document.querySelector('h1.happy').innerHTML = actualYear;
 			 document.querySelector('div.star').innerHTML = '✮';			 
-			 } else if (clickCounter >= 4 && month == 11) {
+			 } else if ( clickCounter >= 4 && (month == 11 || month == 0) ) {
 				 document.querySelector('.gift_1').style.display = "block"; 
 					document.querySelector('.gift_2').style.display = "block"; 
+					 document.querySelector('.gift_1shadow').style.display = "block"; 
+					document.querySelector('.gift_2shadow').style.display = "block"; 
+					
 			 }
 	
 				let colorDivs = document.querySelectorAll(".gar");
@@ -166,6 +171,36 @@ function setLight () {
 				} else if (i == colorDivs.length) {					
 					i = 0;					
 				}
+				
+				//------
+				let blick_1 = document.getElementById('blick_1');
+				let blicker_1 = document.getElementById('g23');
+				color_1 = window.getComputedStyle(blicker_1).backgroundColor;
+				blick_1.style.background = "radial-gradient(circle, "+color_1+" 0%, rgba(255,255,255,0.0) 100%)";
+				
+				let blick_2 = document.getElementById('blick_2');
+				let blicker_2 = document.getElementById('g24');
+				color_2 = window.getComputedStyle(blicker_2).backgroundColor;
+				blick_2.style.background = "radial-gradient(circle, "+color_2+" 0%, rgba(255,255,255,0.0) 100%)";
+				
+				let blick_3 = document.getElementById('blick_3');
+				let blicker_3 = document.getElementById('g25');
+				color_3 = window.getComputedStyle(blicker_3).backgroundColor;
+				blick_3.style.background = "radial-gradient(circle, "+color_3+" 0%, rgba(255,255,255,0.0) 100%)";
+				
+				let blick_4 = document.getElementById('blick_4');
+				let blicker_4 = document.getElementById('g26');
+				color_4 = window.getComputedStyle(blicker_4).backgroundColor;
+				blick_4.style.background = "radial-gradient(circle, "+color_4+" 0%, rgba(255,255,255,0.0) 100%)";
+				// let blicker_2 = document.getElementById('g24');
+				// color_2 = window.getComputedStyle(blicker_3).backgroundColor;
+				// let blicker_3 = document.getElementById('g25');
+				// color_1 = window.getComputedStyle(blicker_1).backgroundColor;
+				// let blicker_4 = document.getElementById('g26');
+				// color_1 = window.getComputedStyle(blicker_4).backgroundColor;
+				
+				
+				//------------
 				
 		 if (clickCounter%2 == 0 && i>2) {			 
 			colorDivs[( i - 2 )].style.backgroundColor = "transparent";			 
