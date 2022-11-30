@@ -172,8 +172,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				border-radius: 50%;
 				box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.6);
 				text-align: center;	
-				display: table-cell;
-				vertical-align: middle;
+				font-size: 2.9vh;
 				transform: rotate(90deg);
 				
 				color: SaddleBrown;
