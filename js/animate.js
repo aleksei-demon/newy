@@ -125,7 +125,7 @@ garlands.append(div); // поместим готовый эл.. в начало 
 //----------------------------------------------------------------------------------------------------
 
 let clickCounter = 0;
-let stepPeriod = 200;
+let stepPeriod = 500;
 let actualYear = '';
 
 let now = new Date(); 
@@ -146,7 +146,8 @@ function setLight () {
 		 if (clickCounter >= 4) {			 
 			 document.querySelector('h1.happy').innerHTML = actualYear;
 			 document.querySelector('div.star').innerHTML = '✮';			 
-			 } else if ( clickCounter >= 4 && (month == 11 || month == 0) ) {
+			 } ;
+			 if ( clickCounter >= 4 && (month == 11 || month == 0) ) { console.log('ok');
 				 document.querySelector('.gift_1').style.display = "block"; 
 					document.querySelector('.gift_2').style.display = "block"; 
 					 document.querySelector('.gift_1shadow').style.display = "block"; 
@@ -192,12 +193,7 @@ function setLight () {
 				let blicker_4 = document.getElementById('g26');
 				color_4 = window.getComputedStyle(blicker_4).backgroundColor;
 				blick_4.style.background = "radial-gradient(circle, "+color_4+" 0%, rgba(255,255,255,0.0) 100%)";
-				// let blicker_2 = document.getElementById('g24');
-				// color_2 = window.getComputedStyle(blicker_3).backgroundColor;
-				// let blicker_3 = document.getElementById('g25');
-				// color_1 = window.getComputedStyle(blicker_1).backgroundColor;
-				// let blicker_4 = document.getElementById('g26');
-				// color_1 = window.getComputedStyle(blicker_4).backgroundColor;
+				
 				
 				
 				//------------

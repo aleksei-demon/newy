@@ -27,8 +27,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 }
 
 .happy {
-	font-size: 6vh;
-	font-family: verdana;
+	font-size: 6vh;	
 	text-align: center;
 	position: relative;
 	bottom: -20vh;
@@ -79,9 +78,9 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 }
 
 		.gift_1{
-				grid-column-start: 7;				   
-				grid-row-start: 34;
-				z-index: 6;
+				grid-column-start: 8;				   
+				grid-row-start: 35;
+				z-index: 15;
 				width: 5vh;
 				height: 5vh;
 				background-image: url("../img/image1.png");
@@ -100,8 +99,8 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				display: none;
 		}
 .gift_1shadow{
-      	grid-column-start: 7;				   
-				grid-row-start: 34;
+      	grid-column-start: 8;				   
+				grid-row-start: 35;
 				z-index: 5;
 	     border-radius: 50%;
 				width: 5vh;
@@ -173,7 +172,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 				border-radius: 50%;
 				box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.6);
 				text-align: center;	
-				font-size: 2.6vh;
+				font-size: 2.9vh;
 				transform: rotate(90deg);
 				
 				color: SaddleBrown;
@@ -258,28 +257,29 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 1;				   
-					grid-row-start: 36; 					
+	grid-row-start: 36; 
+    transition: background-color .4s;	
 }
 .blick_2{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 6;				   
-					grid-row-start: 35; 					
-					
+	grid-row-start: 35; 					
+	transition: background-color .4s;				
 }
 .blick_3{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 11;				   
-					grid-row-start: 34; 					 
-					
+	grid-row-start: 34; 					 
+	transition: background-color .4s;			
 }
 .blick_4{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 17;				   
-					grid-row-start: 34; 					
-					
+	grid-row-start: 34; 					
+	transition: background-color .4s;				
 }
 
 
@@ -288,7 +288,7 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 		height: 2vh;
 		border-radius: 50%;	
 		z-index: 100;
-		transition: background-color .1s;
+		transition: background-color .3s;
 		}
 
 								#g1 {
@@ -436,7 +436,11 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 	
 .happy {
 	font-size: 5vh;		
-	bottom: -15vh;
+	bottom: -11vh;
+}
+
+.blick_1, .blick_2, .blick_3, .blick_4{	
+	width: 10vh; height: 2vh;						
 }
 	
 	.b3{
@@ -468,6 +472,14 @@ grid-template-rows: repeat(35, 2vh);
 justify-items: center;
 	}
 	  
+	  .happy {
+	font-size: 5vh;		
+	bottom: -11vh;
+}
+
+.blick_1, .blick_2, .blick_3, .blick_4{	
+	width: 9vh; height: 2vh;						
+}
 	  
   }
   
@@ -485,6 +497,10 @@ grid-template-rows: repeat(35, 2vh);
 justify-items: center;
 	}
 	  
+	 	  .happy {
+	font-size: 5vh;		
+	bottom: -15vh;
+}
 	 
  }
   
