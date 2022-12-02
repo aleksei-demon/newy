@@ -60,6 +60,87 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 
 }
 
+
+	.cloudTrace{
+		position: absolute;
+		top: 50px;
+		left: 20px;		
+		width: 90vw;
+}
+
+.masterCloud{
+	
+	width: 12vh;
+	height: 7vh;
+	border-radius: 4%;
+	position: relative;
+	display: grid;
+	grid-template-columns:  repeat(12, 2vh);
+	grid-template-rows: repeat(3, 1vh);
+	justify-items: center; 
+
+		animation-name: masterCloud-circle;
+		animation-duration: 200s;
+		animation-timing-function: linear; 
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+
+}
+
+.cloud_1{
+		grid-column-start: 5;				   
+		grid-row-start: 3;
+				z-index: 8;
+	
+	width: 22vh;
+	height: 5vh;
+	 background: rgb(40,0,146,0.7);
+background: linear-gradient(6deg, rgba(117,89,9,0.2) 0%, rgba(50,9,121,1) 35%, rgba(40,0,146,1) 100%); 
+	border-radius: 50%;
+}
+.cloud_2{
+		grid-column-start: 1;				   
+		grid-row-start: 3;
+				z-index: 5;
+	width: 5vh;
+	height: 4vh;
+ background: rgb(103,9,121);
+background: linear-gradient(6deg, rgba(103,9,121,0.1) 10%, rgba(40,0,146,1) 70%, rgba(40,0,146,0.1) 100%);  
+	border-radius: 50%;
+}
+.cloud_3{
+		grid-column-start: 3;				   
+		grid-row-start: 2;
+				z-index: 5;	
+	width: 7vh;
+	height: 6vh;
+	background: rgb(103,9,121);
+	background: linear-gradient(6deg, rgba(103,9,121,0.3) 10%, rgba(40,0,146,1) 70%, rgba(40,0,146,0.1) 100%);  
+	border-radius: 50%;
+}
+.cloud_4{
+		grid-column-start: 6;				   
+		grid-row-start: 1;
+				z-index: 5;	
+	width: 9vh;
+	height: 8vh;
+		 background: rgb(103,9,121);
+background: linear-gradient(6deg, rgba(103,9,121,0.3) 10%, rgba(40,0,146,1) 70%, rgba(40,0,146,0.1) 100%); 
+	border-radius: 50%;
+}
+.cloud_5{
+		grid-column-start: 9;				   
+		grid-row-start: 2;
+		z-index: 5;	
+	width: 7vh;
+	height: 6vh;
+	background: rgb(103,9,121);
+	background: linear-gradient(6deg, rgba(103,9,121,0.3) 10%, rgba(40,0,146,1) 70%, rgba(40,0,146,0.1) 100%); 
+	border-radius: 50%;
+}
+
+
+
 .canvas {
 	position: absolute;	
 	top: 0;
@@ -425,6 +506,17 @@ linear-gradient(180deg, rgb(64, 17, 183) 7%, rgb(100,10,99) 65%, rgb(10, 50, 99)
 	}
 }
 
+@keyframes masterCloud-circle{
+
+	0%{
+		left: 90vw;
+	}
+
+	100%{
+		left: 0vw;
+	}
+}
+
 @media screen and (orientation: portrait) {
 	
 .spruse {
@@ -503,8 +595,6 @@ justify-items: center;
 }
 	 
  }
-  
-  
   
   
   
