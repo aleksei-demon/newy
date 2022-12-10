@@ -339,27 +339,31 @@ background: linear-gradient(6deg, rgba(103,9,121,0.3) 10%, rgba(40,0,146,1) 70%,
 	width: 9vw; height: 2vh;
 	grid-column-start: 1;				   
 	grid-row-start: 36; 
-    transition: background-color .4s;	
+	filter: opacity(75%);
+    	transition: background-color .4s;	
 }
 .blick_2{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 6;				   
-	grid-row-start: 35; 					
+	grid-row-start: 35; 
+	filter: opacity(75%);
 	transition: background-color .4s;				
 }
 .blick_3{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 11;				   
-	grid-row-start: 34; 					 
+	grid-row-start: 34; 
+	filter: opacity(75%);
 	transition: background-color .4s;			
 }
 .blick_4{
 	border-radius: 50%;
 	width: 9vw; height: 2vh;
 	grid-column-start: 17;				   
-	grid-row-start: 34; 					
+	grid-row-start: 34; 	
+	filter: opacity(75%);
 	transition: background-color .4s;				
 }
 
