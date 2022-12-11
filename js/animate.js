@@ -14,7 +14,7 @@ let stepLeft_6 = -450;
 let stepLeft_7 = -550;
 let stepLeft_8 = -550;
 		
-let rowSpace = 250;
+let rowSpace = (h / 3);
 
 function snowString(snows = 10, spaces = 10) {
 	let snowsAmount = "";
@@ -32,15 +32,15 @@ function snowString(snows = 10, spaces = 10) {
 }
 
 if (h>w) {
-	fontStyle = "20px monospace";   rowSpace = 400;	
-		stepLeft_1 = -310;
-		stepLeft_2 = -350;
-		stepLeft_3 = -310;
-		stepLeft_4 = -350;
-		stepLeft_5 = -310;
-		stepLeft_6 = -350;
-		stepLeft_7 = -350;
-		stepLeft_8 = -350;
+	fontStyle = "20px monospace";   rowSpace = (h / 1.89);	
+		stepLeft_1 = -410;
+		stepLeft_2 = -450;
+		stepLeft_3 = -410;
+		stepLeft_4 = -450;
+		stepLeft_5 = -410;
+		stepLeft_6 = -450;
+		stepLeft_7 = -450;
+		stepLeft_8 = -450;
 	}
 
 let dwn = 0;						
